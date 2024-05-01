@@ -1,0 +1,22 @@
+/*todos os elementos*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ 
+/*corpo do documento*/
+body{
+    background: #cdebb3;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+ }
+
+ 
+/*cabecalho*/
+header{
+    font-size: 1.5rem;
+    background: #e7e9e6;
+ }
