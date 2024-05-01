@@ -6,7 +6,6 @@
     box-sizing: border-box;
  }
 
- 
 /*corpo do documento*/
 body{
     background: #cdebb3;
@@ -14,9 +13,62 @@ body{
     min-height: 100vh;
  }
 
- 
 /*cabecalho*/
 header{
     font-size: 1.5rem;
     background: #e7e9e6;
+ }
+
+ /*cabecalho e main*/
+header, main{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ main input, main button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: #e7e9e6;
+ }
+
+/*botão dentro do main*/
+main button{
+    color: #8cbe7a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+ }
+
+ main button:hover{
+    color: white;
+    background: #8cbe7a;
+ }
+ .completa
+ {
+    text-decoration: line-through;
+ }
+
+ a{
+    margin-left: auto;
+    margin-right: 10px;
+ }
+ li{
+    display: flex;
+    flex-direction: row;
+ }
+
+ .concluido
+ {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+ }
+
+ .excluir
+ {
+    background-color: red;
  }
