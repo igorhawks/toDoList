@@ -2,6 +2,7 @@
 const botaoAdiciona = document.querySelector("button")
 const inputTarefa = document.querySelector("#tarefa")
 const lista = document.querySelector("#lista")
+const feito = document.querySelector("#feito")
 
 //cria um listener para monitorar o clique do botão
 botaoAdiciona.addEventListener('click', adicionaTarefa)
@@ -21,14 +22,17 @@ function adicionaTarefa(){
        itemDiv.appendChild(li)
        //criar um botao para feito
        let btFeito = document.createElement('button')
+       btFeito.classList.add("feito")
        let btExcluir = document.createElement('button')
+       btFeito.innerHTML = "V"
+       btExcluir.innerHTML = "X"
         //adiciona um icone de "check" ao botao
         btFeito.classList.add("checked")
         btExcluir.classList.add("excluir")
         //adiciona o botão à div
         itemDiv.appendChild(btFeito)
         itemDiv.appendChild(btExcluir)
-       lista.appendChild(itemDiv)
+        lista.appendChild(itemDiv)
        //limpa o conteúdo do input
        inputTarefa.value = ''
    }
@@ -45,6 +49,7 @@ inputTarefa.addEventListener("keyup", (evento) =>{
 
 //monitora cliques em qualquer local da lista
 lista.addEventListener('click', marcaFeito)
+
 
 //verifica se o que foi clicado dentro da lista foi um botão
 function marcaFeito(evento){
