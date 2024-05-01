@@ -1,11 +1,11 @@
 //seleciona os elementos do HTML
-const botaoAdiciona = document.querySelector("button")
-const inputTarefa = document.querySelector("#tarefa")
-const lista = document.querySelector("#lista")
+const botaoAdiciona = document.querySelector("button");
+const inputTarefa = document.querySelector("#tarefa");
+const lista = document.querySelector("#lista");
 
 
 //cria um listener para monitorar o clique do botão
-botaoAdiciona.addEventListener('click', adicionaTarefa)
+botaoAdiciona.addEventListener('click', adicionaTarefa);
 
 //função que vai adicionar a tarefa à lista
 function adicionaTarefa(){
@@ -13,8 +13,8 @@ function adicionaTarefa(){
    if(inputTarefa.value.length > 3){
         //criar um elemento <div>
         let itemDiv = document.createElement('div')
-        itemDiv.classList.add("divLista")
-
+        itemDiv.id = "divLista"
+                
        //cria elemento <li>
        let li = document.createElement('li')
 
@@ -25,13 +25,14 @@ function adicionaTarefa(){
        itemDiv.appendChild(li)
 
        //criar um botao para feito
-       let btFeito = document.createElement('button')
-       btFeito.id("feito")
-       //btFeito.innerHTML = '<i class="fa fa-check-circle fa-xs">V</i>'
+       let btFeito = document.createElement('button');
+       btFeito.id = "feito";
+       button.value = "V";
 
-       let btExcluir = document.createElement('button')
-       btExcluir.id("excluir")
-       //btExcluir.innerHTML = '<i class="fa fa-minus-circle fa-xs">X</i>'
+       let btExcluir = document.createElement('button');
+       btExcluir.id = "excluir";
+       button.value = "X";
+       
            
 
         //adiciona o botão à div
@@ -58,16 +59,14 @@ inputTarefa.addEventListener("keyup", (evento) =>{
 //monitora cliques em qualquer local da lista
 lista.addEventListener('click', concluirExcluir)
 
-//monitorar clique no botão concluido
-feito.addEventListener('click', marcaFeito)
-
 
 //verifica se o que foi clicado dentro da lista foi um botão
 function concluirExcluir(evento){
-    if(evento.target.nodeName =="BUTTON" && evento.target.id == "feito")
-    {
-        evento.target.parentElement.classList.toggle('completa')
+    if(evento.target.nodeName =="BUTTON" && evento.target.id == "feito"){
+        
+        evento.target.parentElement.classList.toggle('completa');
     }
+
     if(evento.target.nodeName == "BUTTON" && evento.target.id == "excluir"){
         let paiDoBotaoRemover = evento.target.parentElement;
         // Removemos o elemento pai do botão "Remover", que é o item a ser excluído

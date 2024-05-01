@@ -46,6 +46,7 @@ main button{
     color: white;
     background: #8cbe7a;
  }
+ 
  .completa
  {
     text-decoration: line-through;
@@ -60,7 +61,7 @@ main button{
     flex-direction: row;
  }
 
- .divLista
+ ul div
  {
     display: flex;
     flex-direction: row;
@@ -68,7 +69,21 @@ main button{
     padding: 0;
  }
 
- .Excluir
+ #excluir
  {
     background-color: red;
+    color: white;
  }
+
+ button #excluir:hover
+ {
+    background-color: white
+    color: red;
+ }
+
+ #divLista{
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   align-items: center;
+}
