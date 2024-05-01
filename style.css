@@ -60,7 +60,7 @@ main button{
     flex-direction: row;
  }
 
- .concluido
+ .divLista
  {
     display: flex;
     flex-direction: row;
@@ -68,7 +68,7 @@ main button{
     padding: 0;
  }
 
- .excluir
+ .Excluir
  {
     background-color: red;
  }
