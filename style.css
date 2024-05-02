@@ -33,6 +33,7 @@ header, main{
     font-size: 2rem;
     border: none;
     background: #e7e9e6;
+    
  }
 
 /*botão dentro do main*/
@@ -47,6 +48,7 @@ main button{
     background: #8cbe7a;
  }
  
+
  .completa
  {
     text-decoration: line-through;
@@ -56,6 +58,7 @@ main button{
     margin-left: auto;
     margin-right: 10px;
  }
+
  li{
     display: flex;
     flex-direction: row;
@@ -73,11 +76,11 @@ main button{
  {
     background-color: red;
     color: white;
+    text-decoration: none;
  }
 
- button #excluir:hover
- {
-    background-color: white
+#excluir:hover{
+    background-color: white;
     color: red;
  }
 
